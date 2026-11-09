@@ -80,6 +80,7 @@
 }
 .leaf p { font: 600 clamp(1.15rem, 0.9rem + 1vw, 1.6rem)/1.55 'Anek Tamil', sans-serif; font-stretch: 75%; }
 .leaf small { display: block; margin-top: 10px; color: var(--leaf-note); font-size: var(--s-small); }
+.leaf small:not(:last-child) { margin-top: 8px; font-family: 'Literata', serif; font-style: italic; font-size: var(--s-body, 1rem); }
 
 .way-mark { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--field); color: var(--field-ink); font-weight: 700; }
 
