@@ -28,11 +28,11 @@
   <article class="doc wrap">
     <h1 class="h2">Privacy policy</h1>
     <p class="lede">Your journal is yours. Kural Heart has no account, no ads, no analytics and no tracking. It never sells or shares what you write.</p>
-    <p class="doc-date">Effective 9 November 2026</p>
+    <p class="doc-date">Effective 9 November 2026 · updated 9 November 2026 for voice notes, videos and the map</p>
 
     <div class="doc-body">
       <h2>On your phone</h2>
-      <p>Everything you write in Kural Heart is kept on your phone: your pages, their feelings, tags, places, weather and photos, and your settings, saved couplets, thread and seals. What you write and your photos are encrypted with a key kept in Android's secure storage, so the app's files can't be read on their own. Nothing you write is sent to me. If you uninstall the app, it's gone, unless you made a backup.</p>
+      <p>Everything you write in Kural Heart is kept on your phone: your pages, their feelings, tags, places, weather, photos, voice notes and videos, and your settings, saved couplets, thread and seals. What you write, your photos, voice notes and videos are encrypted with a key kept in Android's secure storage, so the app's files can't be read on their own. Nothing you write is sent to me. If you uninstall the app, it's gone, unless you made a backup.</p>
 
       <h2>Backups</h2>
       <p>Backups are off until you turn them on. A backup is one file, encrypted with a passphrase you choose (AES-256, with the key made from your passphrase). Only that passphrase opens it; I can't, and neither can Google or the app that holds the folder. To make nightly backups and sync without asking you each time, the passphrase is kept on your phone in Android's secure storage.</p>
@@ -45,7 +45,7 @@
       <p>Drive sync is optional and off until you turn it on. When you do, you sign in with Google, and Kural Heart asks Google for one permission: <b>to see, create and delete its own configuration data in your Google Drive</b> (the <code>drive.appdata</code> scope). That is a hidden folder that belongs to Kural Heart alone. Kural Heart can't see, open or change any of your other files in Drive.</p>
       <ul>
         <li><b>What Kural Heart receives from Google:</b> your Google account's email address and name, shown in the app so you know which account is syncing, and permission to use that hidden folder.</li>
-        <li><b>What it keeps there:</b> one file, <code>kural-heart.khb</code>, the same encrypted backup described above. Google stores it, but can't read it.</li>
+        <li><b>What it keeps there:</b> one file, <code>kural-heart.khb</code>, the same encrypted backup described above, with your photos, voice notes and videos inside it. Google stores it, but can't read it.</li>
         <li><b>What it does with it:</b> when you sync, and about once a night, it downloads that file, opens it on your phone with your passphrase, adds pages from your other phones, and uploads the updated file.</li>
         <li><b>What it never does:</b> it doesn't send your Google data to me or to anyone else, use it for ads, or use it for anything except keeping your journal backed up and in step across your phones.</li>
       </ul>
@@ -60,12 +60,17 @@
         <li>The place and weather are saved inside that page, encrypted like the rest of it. Your location isn't tracked or kept anywhere else.</li>
       </ul>
 
+      <h2>The map</h2>
+      <p>The Atlas and the Journal's map show your pages that have a place. While a map is on screen, Kural Heart fetches the map pictures for that area from <a href="https://operations.osmfoundation.org/policies/tiles/">OpenStreetMap</a>. OpenStreetMap sees which area is being shown and your IP address, as any website would; it never receives your pages. No map is fetched unless you open one.</p>
+
       <h2>Updates</h2>
       <p>Kural Heart checks <a href="https://expo.dev/privacy">Expo</a>, which delivers its updates, for a newer version when you open it. Expo learns the app's version and that it runs on Android, as any website would see your IP address. You can turn this off in Settings.</p>
 
       <h2>Other things that stay on your phone</h2>
       <ul>
         <li><b>Photos and the camera.</b> A photo you add is chosen with Android's photo picker or taken when you tap Camera. Kural Heart keeps a smaller, encrypted copy inside the app.</li>
+        <li><b>Voice notes.</b> The microphone is used only while you are recording a voice note, after you allow it. The recording is encrypted and kept with its page.</li>
+        <li><b>Videos.</b> A video you add, up to a minute, is chosen with Android's picker and kept encrypted inside the app. It is opened into a temporary file only while it plays, and that file is removed afterwards.</li>
         <li><b>Listening.</b> Couplets are read aloud by your phone's own text-to-speech.</li>
         <li><b>App lock.</b> Android checks your fingerprint, face or screen lock; the app only learns whether it matched.</li>
         <li><b>Reminders.</b> The daily reminder is scheduled on your phone and shown by Android. With the app lock on, it doesn't show the couplet.</li>
