@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · Kural Heart</title>
+  <meta name="description" content="What Kural Heart keeps, where it keeps it, and who it talks to. No account, no ads, no analytics.">
+  <meta name="theme-color" content="#F6F2EA">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wdth,wght@75..100,400..700&family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400..500&family=Noto+Serif+Tamil:wght@400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="heart.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<main id="top">
+
+  <header class="bar wrap">
+    <a class="brand" href="index.html" aria-label="Kural Heart home"><img src="assets/icon.png" width="40" height="40" alt="">Kural Heart</a>
+    <nav aria-label="Pages">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+    <a class="button button-small" href="https://github.com/inigo-code/kural-heart/releases/latest/download/kuralheart.apk">Download</a>
+  </header>
+
+  <article class="doc wrap">
+    <h1 class="h2">Privacy policy</h1>
+    <p class="lede">Your journal is yours. Kural Heart has no account, no ads, no analytics and no tracking. It never sells or shares what you write.</p>
+    <p class="doc-date">Effective 9 November 2026</p>
+
+    <div class="doc-body">
+      <h2>On your phone</h2>
+      <p>Everything you write in Kural Heart is kept on your phone: your pages, their feelings, tags, places, weather and photos, and your settings, saved couplets, thread and seals. What you write and your photos are encrypted with a key kept in Android's secure storage, so the app's files can't be read on their own. Nothing you write is sent to me. If you uninstall the app, it's gone, unless you made a backup.</p>
+
+      <h2>Backups</h2>
+      <p>Backups are off until you turn them on. A backup is one file, encrypted with a passphrase you choose (AES-256, with the key made from your passphrase). Only that passphrase opens it; I can't, and neither can Google or the app that holds the folder. To make nightly backups and sync without asking you each time, the passphrase is kept on your phone in Android's secure storage.</p>
+      <ul>
+        <li><b>In a folder you choose.</b> The backup file is written to the folder you pick with Android's file picker, and nowhere else.</li>
+        <li><b>A plain text export</b>, if you ask for one, is not encrypted. It goes only to the folder you choose.</li>
+      </ul>
+
+      <h2 id="google">Google Drive sync</h2>
+      <p>Drive sync is optional and off until you turn it on. When you do, you sign in with Google, and Kural Heart asks Google for one permission: <b>to see, create and delete its own configuration data in your Google Drive</b> (the <code>drive.appdata</code> scope). That is a hidden folder that belongs to Kural Heart alone. Kural Heart can't see, open or change any of your other files in Drive.</p>
+      <ul>
+        <li><b>What Kural Heart receives from Google:</b> your Google account's email address and name, shown in the app so you know which account is syncing, and permission to use that hidden folder.</li>
+        <li><b>What it keeps there:</b> one file, <code>kural-heart.khb</code>, the same encrypted backup described above. Google stores it, but can't read it.</li>
+        <li><b>What it does with it:</b> when you sync, and about once a night, it downloads that file, opens it on your phone with your passphrase, adds pages from your other phones, and uploads the updated file.</li>
+        <li><b>What it never does:</b> it doesn't send your Google data to me or to anyone else, use it for ads, or use it for anything except keeping your journal backed up and in step across your phones.</li>
+      </ul>
+      <p class="doc-note">Kural Heart's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      <p>To stop syncing, turn off Drive sync in the app; this signs out and removes Kural Heart's access to your Drive. You can also remove its access in your <a href="https://myaccount.google.com/connections">Google Account</a>. Google's handling of your account is covered by <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+
+      <h2>Place and weather</h2>
+      <p>Only when you ask, by tapping Place or Weather on a page or by turning on "Add place and weather to new pages", Kural Heart reads your phone's approximate location (about a neighbourhood, never precise GPS).</p>
+      <ul>
+        <li>The place name is looked up by Android's own geocoder, which uses Google Play services.</li>
+        <li>The weather comes from <a href="https://open-meteo.com/en/terms">Open-Meteo</a>, which is sent your position rounded to about a kilometre, and nothing else.</li>
+        <li>The place and weather are saved inside that page, encrypted like the rest of it. Your location isn't tracked or kept anywhere else.</li>
+      </ul>
+
+      <h2>Updates</h2>
+      <p>Kural Heart checks <a href="https://expo.dev/privacy">Expo</a>, which delivers its updates, for a newer version when you open it. Expo learns the app's version and that it runs on Android, as any website would see your IP address. You can turn this off in Settings.</p>
+
+      <h2>Other things that stay on your phone</h2>
+      <ul>
+        <li><b>Photos and the camera.</b> A photo you add is chosen with Android's photo picker or taken when you tap Camera. Kural Heart keeps a smaller, encrypted copy inside the app.</li>
+        <li><b>Listening.</b> Couplets are read aloud by your phone's own text-to-speech.</li>
+        <li><b>App lock.</b> Android checks your fingerprint, face or screen lock; the app only learns whether it matched.</li>
+        <li><b>Reminders.</b> The daily reminder is scheduled on your phone and shown by Android. With the app lock on, it doesn't show the couplet.</li>
+        <li><b>The widget</b> shows today's couplet. It never shows what you wrote.</li>
+        <li><b>Share images</b> are made on your phone and go only where you share them. Your own words are added only if you switch on "Add my line".</li>
+      </ul>
+
+      <h2 id="delete">Deleting your data</h2>
+      <ul>
+        <li><b>Everything on your phone:</b> in the app, Settings, Delete all data. This erases your pages, photos, history, settings and the encryption keys. Uninstalling the app does the same.</li>
+        <li><b>The copy in Google Drive:</b> open <a href="https://drive.google.com/drive/settings">Google Drive settings</a> on the web, choose Manage apps, find Kural Heart, and choose Delete hidden app data. Then remove its access in your <a href="https://myaccount.google.com/connections">Google Account</a>.</li>
+        <li><b>Backup files in a folder</b> are ordinary files; delete them like any other file.</li>
+      </ul>
+      <p>I hold no copy of your data, so there's nothing for me to delete. If you need help, write to me.</p>
+
+      <h2>Children</h2>
+      <p>Kural Heart is not made for children under 13, and it collects nothing about who uses it.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be here with a new date. If the change is significant, the app will say so.</p>
+
+      <h2>Contact</h2>
+      <p>Inigo, who makes Kural Heart: <a href="mailto:inigo@tosstheworld.org?subject=Kural%20Heart%20privacy">inigo@tosstheworld.org</a></p>
+    </div>
+  </article>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-last"><p>© 2026 Inigo. Kural Heart is free and has no ads.</p><a href="index.html">Kural Heart home</a></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Kural Heart: the app's Olai look. Warm ivory paper by day, Midnight after dark, clay for the one action,
+   Literata and Noto Serif Tamil on the titles, Anek Tamil for reading. Colours match the app's theme.ts. */
+:root {
+  --bg: #F6F2EA;
+  --surface: #FFFDF9;
+  --surface-2: #EFE8DC;
+  --ink: #1E1A16;
+  --muted: #564D44;
+  --accent: #B4492A;
+  --accent-ink: #FFF8F2;
+  --accent-hover: #9E3E22;
+  --field: #B4492A;
+  --field-ink: #FFF8F2;
+  --leaf-1: #F3E7C6;
+  --leaf-2: #E7D4A2;
+  --leaf-ink: #2B1E10;
+  --leaf-note: #6A4B22;
+  --rib: rgba(122, 90, 46, 0.22);
+  --font-display: 'Literata', 'Noto Serif Tamil', Georgia, serif;
+  --font-tamil: 'Noto Serif Tamil', 'Literata', serif;
+  --font-text: 'Anek Tamil', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-weight: 500;
+  --display-track: -0.02em;
+  --display-case: none;
+  --s-h1: clamp(2.75rem, 1.2rem + 5.2vw, 5.75rem);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14110F;
+    --surface: #1E1A17;
+    --surface-2: #28231F;
+    --ink: #F3ECE2;
+    --muted: #CBC1B4;
+    --accent: #E58A62;
+    --accent-ink: #2A140B;
+    --accent-hover: #EE9E7B;
+    --field: #E58A62;
+    --field-ink: #2A140B;
+    --leaf-1: #DBD0B2;
+    --leaf-2: #D0BF92;
+    color-scheme: dark;
+  }
+}
+
+.brand { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; }
+.brand img { border-radius: 11px; }
+.h1 em, .h2 em { font-style: italic; }
+.ta { font-family: var(--font-tamil); }
+
+/* The hero: the title and words beside today's page. */
+.hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; }
+.hero .phone { width: min(100%, 330px); }
+.hero-text { display: grid; gap: 32px; }
+
+/* A couplet on its palm leaf, flush left as in the app. */
+.leaf {
+  position: relative;
+  max-width: 34rem;
+  padding: 44px 30px 22px;
+  border-radius: 16px;
+  background: linear-gradient(var(--leaf-1), var(--leaf-2));
+  border: 1px solid var(--rib);
+  box-shadow: 0 14px 30px -18px rgba(60, 40, 10, 0.55);
+  color: var(--leaf-ink);
+  text-align: left;
+}
+.leaf::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--rib);
+}
+.leaf p { font: 600 clamp(1.15rem, 0.9rem + 1vw, 1.6rem)/1.55 'Anek Tamil', sans-serif; font-stretch: 75%; }
+.leaf small { display: block; margin-top: 10px; color: var(--leaf-note); font-size: var(--s-small); }
+
+.way-mark { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--field); color: var(--field-ink); font-weight: 700; }
+
+/* Pages of plain text: the privacy policy. */
+.doc { max-width: 46rem; padding-block: clamp(3rem, 7vw, 6rem); }
+.doc h1 { margin-bottom: 18px; }
+.doc .lede { max-width: 40ch; }
+.doc-date { margin-top: 14px; color: var(--muted); font-size: var(--s-small); }
+.doc-body { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.doc-body h2 { font: var(--display-weight) var(--s-head)/1.2 var(--font-display); margin: 2.4em 0 0.6em; }
+.doc-body h2:first-child { margin-top: 0; }
+.doc-body p + p, .doc-body p + ul, .doc-body ul + p { margin-top: 0.9em; }
+.doc-body ul { display: grid; gap: 10px; padding-left: 1.2em; list-style: disc; }
+.doc-body a { color: var(--accent); text-underline-offset: 3px; }
+.doc-body b { font-weight: 600; }
+.doc-note { margin-top: 1.2em; padding: 18px 20px; border-radius: 20px; background: var(--surface-2); }
+
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 680px) {
+  .hero .phone { width: min(78%, 320px); }
+  .leaf { padding: 40px 22px 18px; }
+}
