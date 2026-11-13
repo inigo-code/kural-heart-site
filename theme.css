@@ -105,3 +105,12 @@
   .hero .phone { width: min(78%, 320px); }
   .leaf { padding: 40px 22px 18px; }
 }
+
+/* The F-Droid page. */
+.fdroid-marks { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; color: var(--muted); font-size: 1.4rem; }
+.fdroid-marks img { border-radius: 16px; }
+.doc-body ol { display: grid; gap: 10px; padding-left: 1.4em; list-style: decimal; margin-top: 0.9em; }
+.doc-body ol + p, .doc-body .button + ol { margin-top: 0.9em; }
+.fdroid-add { margin-top: 4px; }
+.fdroid-qr { display: block; width: min(300px, 100%); height: auto; margin-top: 16px; border-radius: 16px; }
+.doc-body .fdroid-code { padding: 10px 14px; border-radius: 12px; background: var(--surface-2); font-family: ui-monospace, Consolas, monospace; font-size: 0.92em; overflow-wrap: anywhere; }
