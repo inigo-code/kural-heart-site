@@ -23,7 +23,7 @@
   --display-track: -0.02em;
   --display-case: none;
   --s-h1: clamp(2.75rem, 1.2rem + 5.2vw, 5.75rem);
-  color-scheme: light;
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,7 +40,6 @@
     --field-ink: #2A140B;
     --leaf-1: #DBD0B2;
     --leaf-2: #D0BF92;
-    color-scheme: dark;
   }
 }
 
