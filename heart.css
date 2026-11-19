@@ -91,6 +91,10 @@ main::before { height: min(1100px, 130vh); background: radial-gradient(60% 70% a
 .bar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 24px; min-height: 76px; }
 .bar::before { content: ''; position: absolute; inset: 0 calc(50% - 50vw); z-index: -1; background: color-mix(in srgb, var(--bg) 78%, transparent); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid transparent; opacity: 0; transition: opacity 240ms ease, border-color 240ms ease; }
 .bar.is-stuck::before { opacity: 1; border-bottom-color: var(--line); }
+/* Without heart.js the bar can't tell when the page moves under it, so it stays frosted. */
+html:not(.js) .bar::before { opacity: 1; border-bottom-color: var(--line); }
+/* A page with no section links (the privacy policy): the button still sits at the right. */
+.bar > .brand + .button { margin-left: auto; }
 .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--s-body); text-transform: var(--display-case); text-decoration: none; letter-spacing: -0.01em; }
 .brand img { width: 40px; height: 40px; border-radius: 11px; transition: transform 300ms var(--ease-out); }
 .bar nav { display: flex; gap: 4px; margin-left: auto; }
